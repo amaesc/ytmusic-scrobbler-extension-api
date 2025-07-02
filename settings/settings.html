@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrobble Settings</title>
+  <link rel="stylesheet" href="settings.css" />
+</head>
+<body>
+  <main>
+    <div id="most-replayed-container">
+      <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+        <i class="fa-solid fa-gears"></i>
+        <h2 style="margin: 0;">Account Settings</h2>
+      </div>
+
+      <div class="most-replayed-item" style="justify-content: space-between;">
+        <strong>Email:</strong>
+        <span id="user-email">Loading...</span>
+      </div>
+      <div class="most-replayed-item" style="justify-content: space-between;">
+        <strong>Status:</strong>
+        <span id="user-status">Checking...</span>
+      </div>
+
+      <div 
+        class="most-replayed-item" 
+        style="
+          justify-content: space-between;
+          padding: 0;
+          height: 50px;"
+      >
+        <button id="export-backup-btn" class="prev-week-btn">Export JSON Backup</button>
+      </div>
+
+      <div 
+        class="most-replayed-item" 
+        style="
+          justify-content: space-between;
+          padding: 0;
+          height: 50px;"
+      >
+        <button id="export-data-btn" class="prev-week-btn" style="border-right: 2px solid #00bcd4">Export Data</button>
+        <button id="change-password-btn" class="prev-week-btn">Change Password</button>
+      </div>
+
+      <div 
+        id="change-password-modal" 
+        style="
+          display:none; 
+          flex-direction:column; 
+          gap:10px; padding:15px; 
+          border: none; 
+          border-radius:8px; 
+          background:#222;
+          color: white; 
+          margin-top:15px;"
+        >
+        <input type="password" id="old-password" placeholder="Current password" />
+        <input type="password" id="new-password" placeholder="New password" />
+        <input type="password" id="confirm-password" placeholder="Confirm new password" />
+        
+        <div style="display:flex; padding: 0; height: 50px; margin-top: 10px;">
+          <button class="prev-week-btn" id="submit-password-change" style="border-right: 2px solid #00bcd4">Confirm</button>
+          <button class="prev-week-btn" id="cancel-password-change">Cancel</button>
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+
+
+
+  <img id="background-gif" src="./img/background.gif" alt="">
+
+  <script src="settings.js"></script>
+  <script src="https://kit.fontawesome.com/0042d2061e.js" crossorigin="anonymous"></script>
+</body>
+</html>

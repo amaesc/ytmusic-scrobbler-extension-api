@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Scrobble History</title>
+  <link rel="stylesheet" href="history.css" />
+</head>
+<body>
+
+  <main>
+    <div id="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>ID</th>
+            <th>Song Name</th>
+            <th>Artist</th>
+            <th>Album</th>
+            <th>Year</th>
+            <th>Favorite?</th>
+            <th>Scrobbled Date</th>
+          </tr>
+        </thead>
+        <tbody id="history-body">
+          <tr><td colspan="8">Loading...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <aside id="most-replayed-container">
+      <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+        <img 
+          src="https://media.baamboozle.com/uploads/images/1322368/1682590771_171892_gif-url.gif" 
+          alt=""
+          height="75">
+        <h2 style="margin: 0;">Stats</h2>
+      </div>
+
+      <div class="most-replayed-item" style="justify-content: space-between;">
+        <strong>Favorite Song:</strong>
+        <span id="most-replayed-song">Loading...</span>
+      </div>
+
+      <div class="most-replayed-item" style="justify-content: space-between;">
+        <strong>Favorite Cover:</strong>
+        <img id="img-most-replayed-song" src="" alt="Image not available">
+      </div>
+
+      <div class="most-replayed-item" style="justify-content: space-between;">
+        <strong>Favorite Artist:</strong>
+        <span id="most-replayed-artist">Loading...</span>
+      </div>
+
+      <div class="most-replayed-item" style="justify-content: space-between;">
+        <strong>Favorite Album:</strong>
+        <span id="most-replayed-album">Loading...</span>
+      </div>
+
+      <div class="most-replayed-item" style="justify-content: space-between;">
+        <strong>Average Year:</strong>
+        <span id="most-average-year">Loading...</span>
+      </div>
+
+            <div class="most-replayed-item">
+        <canvas id="songsByDay"></canvas>
+      </div>
+
+      <div 
+        class="most-replayed-item" 
+        style="
+          display: flex; 
+          height: 50px; 
+          padding: 0; 
+          justify-content: center;
+          gap: 10px"
+        >
+        <button class="prev-week-btn" id="prev-week-btn">
+          <i class="fa-solid fa-backward"></i>
+        </button>
+        <strong 
+          id="actual-week" 
+          style="
+            flex: 1;
+            height: 100%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;">
+          Loading...
+        </strong>
+        <button class="prev-week-btn" id="next-week-btn">
+          <i class="fa-solid fa-forward"></i>
+        </button>
+      </div>
+
+
+    </aside>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="history.js"></script>
+  <script src="https://kit.fontawesome.com/0042d2061e.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

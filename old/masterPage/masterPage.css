@@ -1,0 +1,153 @@
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #121212;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #d00092;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #17a44f;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #1db954;
+  padding-bottom: 0.5rem;
+}
+
+.track-info {
+  background-color: #222;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.track-info p {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+#scrobble-btn {
+  background-color: #1db954;
+  border: none;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#scrobble-btn:hover {
+  background-color: #17a44f;
+}
+
+#history-list {
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: #222;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+#history-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #444;
+}
+
+#settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+}
+
+#settings-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+}
+
+#settings-form input {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: none;
+  font-size: 1rem;
+}
+
+#settings-form button {
+  background-color: #1db954;
+  border: none;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+}
+
+#settings-form button:hover {
+  background-color: #17a44f;
+}
+
+footer {
+  background-color: #181818;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Utility for hiding sections */
+[hidden] {
+  display: none !important;
+}

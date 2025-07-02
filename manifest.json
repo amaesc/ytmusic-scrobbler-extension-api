@@ -1,0 +1,38 @@
+{
+  "manifest_version": 2,
+  "name": "YouTube Music Scrobbler",
+  "version": "1.0",
+  "description": "Scrobbles songs from YouTube Music to your backend with login support",
+  "permissions": [
+    "https://music.youtube.com/*",
+    "http://127.0.0.1:5000/*",
+    "storage",
+    "tabs",
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://music.youtube.com/*"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "web_accessible_resources": [
+    "history/history.html",
+    "history/history.js",
+    "settings/settings.html",
+    "settings/settings.js"
+  ],
+  "content_security_policy": "script-src 'self' https://kit.fontawesome.com https://cdn.jsdelivr.net; object-src 'self';"
+}

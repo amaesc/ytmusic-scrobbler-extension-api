@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Web Scrobbler</title>
+  <link rel="stylesheet" href="masterPage.css" />
+</head>
+<body>
+  <header>
+    <h1>Web Scrobbler API Project</h1>
+    <nav>
+      <ul>
+        <li><a href="#" class="active">Now Playing</a></li>
+        <li><a href="#">History</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="now-playing">
+      <h2>Now Playing</h2>
+      <div class="track-info">
+        <p class="track-title">Track Title</p>
+        <p class="track-artist">Artist Name</p>
+        <p class="track-album">Album Name</p>
+      </div>
+      <button id="scrobble-btn">Scrobble Track</button>
+    </section>
+
+    <section id="history" hidden>
+      <h2>Scrobble History</h2>
+      <ul id="history-list"></ul>
+    </section>
+
+    <section id="settings" hidden>
+      <h2>Settings</h2>
+      <form id="settings-form">
+        <label>
+          Username:
+          <input type="text" id="username" name="username" />
+        </label>
+        <label>
+          API Key:
+          <input type="text" id="apikey" name="apikey" />
+        </label>
+        <button type="submit">Save</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Alberto Marquez Escamilla. All rights reserved.</p>
+  </footer>
+
+  <script src="masterPage.js"></script>
+</body>
+</html>

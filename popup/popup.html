@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scrobbler Extension</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="popup-container">
+    <h1>SCROBBLER</h1>
+    <br>
+
+    <!-- Login/Register Section -->
+    <section id="auth-section">
+      <div class="tabs">
+        <button id="login-tab" class="tab active">Login</button>
+        <button id="register-tab" class="tab">Register</button>
+      </div>
+
+      <form id="login-form" class="form active" novalidate>
+        <label for="login-email">Email</label>
+        <input type="email" id="login-email" name="email" required autocomplete="username" />
+
+        <label for="login-password">Password</label>
+        <input type="password" id="login-password" name="password" required autocomplete="current-password" />
+
+        <button type="submit" class="btn">Login</button>
+      </form>
+
+      <form id="register-form" class="form" novalidate>
+        <label for="register-email">Email</label>
+        <input type="email" id="register-email" name="email" required autocomplete="email" />
+
+        <label for="register-password">Password</label>
+        <input type="password" id="register-password" name="password" required autocomplete="new-password" />
+
+        <label for="register-password-confirm">Confirm Password</label>
+        <input type="password" id="register-password-confirm" name="password-confirm" required autocomplete="new-password" />
+
+        <button type="submit" class="btn">Register</button>
+      </form>
+      <div id="message" role="alert" aria-live="polite"></div>
+    </section>
+
+    <!-- Dashboard Section (initially hidden) -->
+    <section id="dashboard-section" style="display: none;">
+      <h2 style="padding-bottom: 10px;">Actual Playing:</h2>
+      <div 
+        style="
+          display: flex; 
+          flex-direction: row; 
+          text-align: start;
+          align-items: center; 
+          gap: 10px; 
+          padding-bottom: 10px;">
+        <img id="current-photo" src="" alt="n/a">
+        <p id="current-song">Loading...</p>
+      </div>
+
+      <div style="display: grid; text-align: center;">
+        <p style="grid-column: 1 / 2; grid-row: 1 / 2; font-weight: bold;">Artist</p>
+        <p id="current-artist" style="grid-column: 1 / 2; grid-row: 2 / 3;">Loading...</p>
+        <p style="grid-column: 2 / 3; grid-row: 1 / 2; font-weight: bold;">Album</p>
+        <p id="current-album" style="grid-column: 2 / 3; grid-row: 2 / 3">Loading...</p>
+        <p id="current-year" style="grid-column: 1 / 3; grid-row: 3 / 4">Loading...</p>
+      </div>
+
+      <div style="grid-column: 2 / 3; display: flex; flex-direction: row; gap: 10px; padding-bottom: 10px; padding-top: 10px;">
+        <button id="history-btn" class="btn">Scrobble History</button>
+        <button id="settings-btn" class="btn">Account Settings</button>
+      </div>
+      <button id="logout-btn" class="btn">Logout</button>
+    </section>
+
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

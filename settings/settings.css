@@ -1,0 +1,102 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: #e0e0e0;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+main {
+  display: flex;
+  gap: 20px;
+  flex: 1 1 auto;
+  min-height: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  z-index: 2;
+}
+
+#most-replayed-container {
+  flex: 1;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 15px;
+  color: #00bcd4;
+  font-size: 1rem;
+  overflow: hidden;
+  max-width: 20vw;
+}
+
+.most-replayed-item {
+  display: flex;
+  color: white;
+  justify-content: center;
+  background-color: #222;
+  border-radius: 8px;
+  padding-bottom: 50px;
+  padding: 15px;
+}
+
+#background-gif {
+  position: fixed;
+  bottom: 0;                   
+  left: 0;
+  z-index: 1;
+  width: 100%;               
+  opacity: 0.075;               
+  pointer-events: none;       
+}
+
+.prev-week-btn {
+  flex: 1; 
+  height: 100%; 
+  cursor: pointer; 
+  background-color: #222; 
+  color: white; 
+  border: none;
+  font-size: larger;
+  transition: background-color 0.3s ease;
+}
+
+.prev-week-btn:hover {
+  background-color: #ff4081;
+}
+
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: white;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background-color: transparent;
+  color: white;
+}
+
+input:focus {
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: #ff4081;
+  box-shadow: none;
+  outline: none;
+}
+
+input::placeholder {
+  color: white;
+  font-style: italic;
+}

@@ -1,0 +1,197 @@
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  width: 320px;
+  background-color: #1e1e1e;
+  color: #eee;
+  padding: 20px;
+}
+
+.popup-container {
+  background-color: #2c2c2c;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex: 1;
+  background-color: #444;
+  border: none;
+  color: #ccc;
+  padding: 12px 0;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 4px 4px 0 0;
+  transition: background-color 0.3s ease;
+}
+
+.tab:not(:last-child) {
+  margin-right: 8px;
+}
+
+.tab.active {
+  background-color: #1db954;
+  color: white;
+  font-weight: 700;
+}
+
+.form {
+  display: none;
+  flex-direction: column;
+}
+
+.form.active {
+  display: flex;
+}
+
+label {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  background-color: #444;
+  color: #eee;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  background-color: #555;
+}
+
+.btn {
+  background-color: #1db954;
+  border: none;
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #17a44f;
+}
+
+#message {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  min-height: 1.2em;
+  text-align: center;
+  color: #f44336; /* red for errors */
+}
+
+#message.success {
+  color: #4caf50; /* green for success */
+}
+
+
+
+
+
+#dashboard-section {
+  display: grid;
+  grid-template-columns: 60px auto;
+  grid-template-rows: auto auto auto auto auto auto;
+  gap: 6px;
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+#dashboard-section h2 {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  text-align: center;
+  margin: 0;
+}
+
+#current-photo {
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.3);
+}
+
+#current-song {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+#current-artist {
+  align-self: start;
+  font-size: 0.85rem;
+  color: whitesmoke;
+}
+
+#current-album {
+  text-align: center;
+  font-size: 0.85rem;
+  color: whitesmoke;
+}
+
+#history-btn {
+  padding: 6px;
+  background: #1db954;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#settings-btn {
+  grid-column: 2 / 3;
+  grid-row: 5 / 6;
+  padding: 6px;
+  background: #1db954;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+#logout-btn {
+  grid-column: 1 / 3;
+  grid-row: 6 / 7;
+  padding: 6px;
+  background: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#logout-btn:hover {
+  background: #c9302c;
+}
+
